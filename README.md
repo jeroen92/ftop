@@ -2,7 +2,7 @@
 ftop is a filesystem monitoring tool for FreeBSD, tracing read and write calls to the Virtual File System. It's main feature is to trace I/O by filename.
 
 ### Usage
-Launch ftop with --help for all available flags and arguments.
+Make sure the DTrace kernel module is loaded. Use `kldload dtraceall` if it's not. For more information, launch ftop with *--help* to see all available flags and arguments.
 
 ### Issues
 **Ftop isn't showing me any I/O activity, while there is certainly some I/O going on**
