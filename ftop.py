@@ -21,6 +21,10 @@ parser.add_option('-f', '--forcelookup', action='store_true', dest="forceLookup"
 parser.add_option('-m', '--mountpoint', type='str', dest='pathname', default='/', help='Mountpoint of filesystem to monitor. Defaults to `/`.')
 options, args = parser.parse_args()
 
+absolutePath = os.path.realpath(__file__)
+directoryName = os.path.dirname(absolutePath)
+os.chdir(directoryName)
+
 procMgr = ProcessManager(options)
 
 try:
